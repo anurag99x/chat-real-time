@@ -1,0 +1,26 @@
+{
+  "name": "chat-real-time",
+  "version": "1.0.0",
+  "description": "chat-real",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anurag99x/chat-real-time.git"
+  },
+  "author": "Anurag",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anurag99x/chat-real-time/issues"
+  },
+  "homepage": "https://github.com/anurag99x/chat-real-time#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "socket.io": "^4.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
