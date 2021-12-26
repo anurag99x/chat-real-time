@@ -35,6 +35,10 @@ io.on("connection", (socket) => {
     delete users[socket.id];
     io.emit("user-list", users);
   });
+
+  socket.on("message", (data) => {
+    socket.broadcast.emit("message", { user: data.user, msg: data.msg });
+  });
 });
 
 //Setup ends
