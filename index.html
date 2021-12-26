@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHAT_APP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="title">
+          <img style="width: 35px" src="icons/icons8-chat-90.png" />
+          <h1>CHAT_APP</h1>
+        </div>
+        <button class="hamburger" type="button" onclick="show_hide()">
+          <img src="icons/icons8-menu.svg" style="width: 35px" />
+        </button>
+      </header>
+      <div class="container">
+        <div class="users-window">
+          <div class="users-head">
+            <h3>People</h3>
+            <h4>3</h4>
+          </div>
+          <div class="users-list">
+            <p>Jarvis</p>
+            <p>Ultron</p>
+            <p>Veronica</p>
+          </div>
+        </div>
+        <div class="chat-window">
+          <div class="chats">
+            <div class="user-join">
+              <p><b>Jarvis</b> joined the chat</p>
+            </div>
+            <div class="message incoming">
+              <h5>Jarvis</h5>
+              <p class="m-p">Hello Ultron</p>
+            </div>
+            <div class="message outgoing">
+              <h5>Veronica</h5>
+              <p class="m-p">Welcome Jarvis</p>
+            </div>
+          </div>
+          <div class="user-input">
+            <input type="text" placeholder="Type your message...." />
+            <button class="btn-inner">SEND</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var users_window = document.querySelector(".users-window");
+
+      function show_hide() {
+        if (users_window.style.display == "block") {
+          users_window.style.display = "none";
+        } else {
+          users_window.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
