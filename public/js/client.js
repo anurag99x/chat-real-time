@@ -29,11 +29,13 @@ function userJoinLeft(name, status) {
 
   div.innerHTML = content;
   chats.appendChild(div);
+  chats.scrollTop = chats.scrollHeight;
 }
 
 //Notify user has left
 socket.on("user-disconnected", (user) => {
   userJoinLeft(user, "left");
+  //   chats.scrollTop = chats.scrollHeight;
 });
 
 //To update list of users and count
@@ -68,10 +70,11 @@ function appendMessage(data, status) {
   let div = document.createElement("div");
   div.classList.add("message", status);
   let content = `<h5>${data.user}</h5>
-    <p>${data.msg}</p>`;
+    <p class="m-p">${data.msg}</p>`;
 
   div.innerHTML = content;
   chats.appendChild(div);
+  chats.scrollTop = chats.scrollHeight;
 }
 
 socket.on("message", (data) => {
